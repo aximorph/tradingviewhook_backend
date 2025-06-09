@@ -30,3 +30,24 @@ This project provides a basic member management REST API using **Fastify** runni
    - `DELETE /members/:id` – delete member
 
 Data is stored in memory and will reset when the server restarts. For persistent storage consider using a real database.
+
+## Cloudflare Worker Version (Bun + Hono)
+
+This repository also includes a Cloudflare Worker powered by **Hono**. The entry
+point is `src/worker.ts` and it can be run locally using **wrangler** with the
+help of **Bun**.
+
+1. Install the dependency:
+
+   ```bash
+   bun add hono
+   ```
+
+2. Start the worker locally:
+
+   ```bash
+   bunx wrangler dev
+   ```
+
+The worker exposes the same CRUD routes under `/members` and runs on
+`http://localhost:8787` by default.
