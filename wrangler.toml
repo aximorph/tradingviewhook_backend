@@ -1,9 +1,0 @@
-name = "tradingviewhook-backend"
-main = "src/index.ts"
-compatibility_date = "2023-01-01"
-
-[build]
-command = "npm install"
-
-[dev]
-port = 8787
